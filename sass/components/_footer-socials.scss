@@ -1,0 +1,20 @@
+.follow {
+    margin-top: 12px;
+
+    font-weight: 700;
+    font-size: var(--text-font-size);
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+.footer-socials {
+    margin-top: 20px;
+}
+
+.footer-link {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-icon {
+    fill: $primary-background-color;
+}

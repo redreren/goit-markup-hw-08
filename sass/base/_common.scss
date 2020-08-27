@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $main-font;
+    font-style: normal;
+    color: $text-color-light-theme;
+    letter-spacing: 0.03em;
+    background-color: $primary-background-color;
+}
+
+img {
+    display: block;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.list {
+    list-style: none;
+}
+
+.address {
+    font-style: normal;
+}
+
+.section-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: $title-font-size;
+    line-height: 1.167;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+
+    color: $title-color-light-theme;
+}
+
+button {
+    padding: 0;
+    font: inherit;
+    color: inherit;
+}

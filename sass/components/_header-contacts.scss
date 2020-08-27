@@ -1,0 +1,30 @@
+.contact-list {
+    display: flex;
+    margin-left: auto;
+}
+
+.contact-list-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.contact-list-item-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: $text-color-light-theme;
+
+    &:hover .contact-icon,
+    &:focus .contact-icon {
+        fill: $accent-color;
+    }
+}
+
+.contact-icon {
+    margin-right: 10px;
+    vertical-align: middle;
+
+    fill: $text-color-light-theme;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
