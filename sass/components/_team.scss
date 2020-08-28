@@ -13,8 +13,14 @@
 // .team-list {
 //     display: flex;
 // }
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
 
 .team-list-item {
+    margin: 15px;
     padding-bottom: 30px;
 
     text-align: center;
@@ -49,9 +55,11 @@
         color: $text-color-light-theme;
     }
 
-    &:not(:last-child) {
-        @media screen and (max-width: 767px) {
-            margin-bottom: 30px;
-        }
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 15px * 4) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 15px * 8) / 4);
     }
 }

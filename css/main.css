@@ -644,17 +644,16 @@ button {
 }
 
 .features-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: -15px;
 }
 
 .features-list-item {
   margin: 15px;
-}
-
-@media screen and (max-width: 767px) {
-  .features-list-item:not(:last-child) {
-    margin-bottom: 30px;
-  }
 }
 
 .features-list-item::before {
@@ -685,22 +684,24 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-  .features-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
-@media screen and (min-width: 768px) and (min-width: 768px) {
   .features-list-item {
     width: calc((100% - 15px * 4) / 2);
   }
 }
 
-@media screen and (min-width: 768px) and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
+  .features-list-item {
+    width: calc((100% - 15px * 8) / 4);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features-list-item {
+    width: calc((100% - 15px * 4) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .features-list-item {
     width: calc((100% - 15px * 8) / 4);
   }
@@ -834,7 +835,17 @@ button {
   }
 }
 
+.team-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -15px;
+}
+
 .team-list-item {
+  margin: 15px;
   padding-bottom: 30px;
   text-align: center;
   background-color: #ffffff;
@@ -863,9 +874,15 @@ button {
   color: #757575;
 }
 
-@media screen and (max-width: 767px) {
-  .team-list-item:not(:last-child) {
-    margin-bottom: 30px;
+@media screen and (min-width: 768px) {
+  .team-list-item {
+    width: calc((100% - 15px * 4) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list-item {
+    width: calc((100% - 15px * 8) / 4);
   }
 }
 
