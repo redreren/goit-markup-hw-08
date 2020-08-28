@@ -643,6 +643,14 @@ button {
   }
 }
 
+.features-list {
+  margin: -15px;
+}
+
+.features-list-item {
+  margin: 15px;
+}
+
 @media screen and (max-width: 767px) {
   .features-list-item:not(:last-child) {
     margin-bottom: 30px;
@@ -674,6 +682,28 @@ button {
   font-size: 14px;
   line-height: 1.7;
   color: #757575;
+}
+
+@media screen and (min-width: 768px) {
+  .features-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .features-list-item {
+    width: calc((100% - 15px * 4) / 2);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .features-list-item {
+    width: calc((100% - 15px * 8) / 4);
+  }
 }
 
 .antenna::before {
@@ -1058,10 +1088,18 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.footer-section:not(:last-child) {
-  margin-right: 70px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer-logo {
@@ -1087,11 +1125,6 @@ button {
   color: #2196f3;
 }
 
-.footer-follow {
-  margin-top: 12px;
-  margin-right: 93px;
-}
-
 .follow {
   font-weight: 700;
   font-size: var(--text-font-size);
@@ -1111,10 +1144,6 @@ button {
   fill: #ffffff;
 }
 
-.footer-subscribe {
-  margin-top: 12px;
-}
-
 .footer-subscribe .text {
   margin-bottom: 20px;
   font-weight: 700;
@@ -1123,20 +1152,10 @@ button {
   text-transform: uppercase;
 }
 
-.footer-field {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .footer-input {
   padding: 15px 16px;
-  width: 358px;
+  width: 450px;
   height: 50px;
-  margin-right: 12px;
   color: #ffffff;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
