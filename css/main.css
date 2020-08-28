@@ -415,6 +415,8 @@ body {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .link {
@@ -634,7 +636,14 @@ button {
   padding-bottom: 60px;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (min-width: 1200px) {
+  .features {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .features-list-item:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -788,6 +797,13 @@ button {
   background-color: #f5f4fa;
 }
 
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .team-list-item {
   padding-bottom: 30px;
   text-align: center;
@@ -817,47 +833,40 @@ button {
   color: #757575;
 }
 
-@media screen and (max-width: 479px) {
-  .team-list-item-image {
-    width: 450px;
-    height: 460px;
-  }
-}
-
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767px) {
   .team-list-item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
 
 .partners {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #ffffff;
+}
+
+@media screen and (min-width: 1200px) {
+  .partners {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .client-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -15px;
 }
 
 .client-list-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: calc((100% - 30px * 5) / 6);
-  margin-right: 30px;
-}
-
-.client-list-item:last-child {
-  margin-right: 0;
+  width: calc((100% - 15px * 4) / 2);
+  margin: 15px;
 }
 
 .client-list-item-link {
-  width: 170px;
   height: 90px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -878,6 +887,18 @@ button {
   fill: #afb1b8;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .client-list-item {
+    width: calc((100% - 15px * 6) / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .client-list-item {
+    width: calc((100% - 15px * 12) / 6);
+  }
 }
 
 .client-list-item-link:hover,

@@ -1,26 +1,26 @@
 .partners {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 
     background-color: $primary-background-color;
 }
 
 .client-list {
     display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
 }
 
 .client-list-item {
-    display: flex;
-    flex-wrap: wrap;
-    width: calc((100% - 30px * 5) / 6);
-    margin-right: 30px;
-
-    &:last-child {
-        margin-right: 0;
-    }
+    width: calc((100% - 15px * 4) / 2);
+    margin: 15px;
 
     &-link {
-        width: 170px;
         height: 90px;
         justify-content: center;
         align-items: center;
@@ -36,6 +36,14 @@
         fill: #afb1b8;
 
         transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 15px * 6) / 3);
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 15px * 12) / 6);
     }
 }
 

@@ -1,11 +1,13 @@
 .team {
-    // padding-top: 94px;
-    // padding-bottom: 94px;
-
     padding-top: 60px;
     padding-bottom: 60px;
 
     background-color: $secondary-background-color;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 // .team-list {
@@ -47,15 +49,8 @@
         color: $text-color-light-theme;
     }
 
-    &-image {
-        @media screen and (max-width: 479px) {
-            width: 450px;
-            height: 460px;
-        }
-    }
-
     &:not(:last-child) {
-        @media screen and (max-width: 479px) {
+        @media screen and (max-width: 767px) {
             margin-bottom: 30px;
         }
     }
