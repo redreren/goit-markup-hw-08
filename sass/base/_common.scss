@@ -31,15 +31,32 @@ img {
 }
 
 .section-title {
-    font-style: normal;
+    margin-bottom: 30px;
+
     font-weight: 700;
-    font-size: $title-font-size;
-    line-height: 1.167;
+    font-size: 28px;
+    line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
-    margin-bottom: 50px;
 
     color: $title-color-light-theme;
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+
+        font-size: $title-font-size;
+        line-height: 1.167;
+    }
+
+    // font-style: normal;
+    // font-weight: 700;
+    // font-size: $title-font-size;
+    // line-height: 1.167;
+    // text-align: center;
+    // letter-spacing: 0.03em;
+    // margin-bottom: 50px;
+
+
 }
 
 button {
