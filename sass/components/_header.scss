@@ -1,8 +1,6 @@
 .header {
     background-color: $primary-background-color;
     border-bottom: 1px solid #ececec;
-    position: relative;
-    height: 60px;
 }
 
 .header .link:focus,
@@ -30,52 +28,62 @@
 }
 
 // MOBILE HEADER
-
-.menu-button {
-    display: inline-flex;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    margin-left: auto;
-
-    @media screen and (min-width: 768px) {
-        display: none;
+@media screen and (max-width: 767px) {
+    .header {
+        position: relative;
+        height: 60px;
+        padding-top: 18px;
     }
-}
 
-.menu-button .icon-cross {
-    display: none;
-}
+    .menu-button {
+        display: inline-flex;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        margin-left: auto;
 
-.menu-button.is-open .icon-cross {
-    display: block;
-}
-
-.menu-button.is-open .icon-menu {
-    display: none;
-}
-
-.menu-container {
-    background-color: $primary-background-color;
-    padding: 60px;
-    text-align: center;
-
-    @media screen and (max-width: 767px) {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        z-index: 10;
-
-        &.is-open {
-            display: block;
+        &:hover .icon-cross,
+        &:focus .icon-menu {
+            fill: $accent-color;
         }
     }
 
-    @media screen and (min-width: 768px) {
-        display: flex;
+    .menu-button .icon-cross {
+        display: none;
+    }
+
+    .menu-button.is-open .icon-cross {
+        display: block;
+    }
+
+    .menu-button.is-open .icon-menu {
+        display: none;
+    }
+
+    .menu-container {
+        background-color: $primary-background-color;
+        padding: 60px;
+        text-align: center;
+
+        @media screen and (max-width: 767px) {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+
+            &.is-open {
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .menu-button {
+        display: none;
     }
 }
 
@@ -84,26 +92,46 @@
 .navigation {
     display: flex;
     align-items: center;
-    padding-top: 18px;
+}
+
+.menu-container {
+    @media screen and (min-width:768px) {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .navigation-list {
     margin-bottom: 60px;
-    // display: flex;
-    // margin-left: 93px;
+
+    @media screen and (min-width:768px) {
+        display: flex;
+        margin-bottom: 0px;
+        margin-left: 88px;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-left: 93px;
+    }
 }
 
 .navigation-list-item:not(:last-child) {
     margin-bottom: 40px;
-    // margin-right: 50px;
+
+    @media screen and (min-width:768px) {
+        margin-bottom: 0px;
+        margin-right: 50px;
+    }
 }
 
 .navigation-list-item-link {
-    display: block;
-    // padding-top: 32px;
-    // padding-bottom: 32px;
-
     color: $title-color-light-theme;
+
+    @media screen and (min-width:768px) {
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
 }
 
 .navigation-list-item-link.current {
@@ -128,25 +156,41 @@
 // CONTACTS LIST
 
 .contact-list {
-    // display: flex;
-    // margin-left: auto;
+    @media screen and (min-width:768px) {
+        margin-left: 47px;
+    }
+
+    @media screen and (min-width:1200px) {
+        display: flex;
+        margin-left: 279px;
+    }
 }
 
 .contact-list-item:not(:last-child) {
     margin-bottom: 16px;
-    // margin-right: 50px;
+
+    @media screen and (min-width:768px) {
+        margin-bottom: 10px;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-bottom: 0px;
+        margin-right: 50px;
+    }
 }
 
 .contact-list-item-link {
-    display: block;
-    // padding-top: 32px;
-    // padding-bottom: 32px;
-
     color: $text-color-light-theme;
 
     &:hover .contact-icon,
     &:focus .contact-icon {
         fill: $accent-color;
+    }
+
+    @media screen and (min-width:1200px) {
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 }
 
