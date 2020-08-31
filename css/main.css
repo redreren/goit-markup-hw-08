@@ -1360,6 +1360,7 @@ button {
     text-align: left;
     width: 270px;
     margin: 15px;
+    margin: 0;
   }
 }
 
@@ -1425,6 +1426,7 @@ button {
   .footer-subscribe {
     width: 570px;
     margin: 15px;
+    margin-right: 0;
   }
 }
 

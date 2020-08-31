@@ -29,6 +29,10 @@
     @media screen and (max-width:767px) {
         align-items: center;
     }
+
+    // @media screen and (min-width:1200px) {
+    //     margin: -15px;
+    // }
 }
 
 .footer-logo {
@@ -57,6 +61,7 @@
         width: 270px;
         // margin-right: 70px;
         margin: 15px;
+        margin: 0;
     }
 }
 
@@ -121,6 +126,7 @@
     @media screen and (min-width:1200px) {
         width: 570px;
         margin: 15px;
+        margin-right: 0;
     }
 }
 
