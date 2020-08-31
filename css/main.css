@@ -1383,6 +1383,7 @@ button {
 
 .footer-follow {
   margin-bottom: 60px;
+  text-align: center;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1394,7 +1395,6 @@ button {
 }
 
 .follow {
-  text-align: center;
   font-weight: 700;
   font-size: var(--text-font-size);
   line-height: 1.14;
@@ -1403,6 +1403,9 @@ button {
 
 .footer-socials {
   margin-top: 20px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .footer-link {
